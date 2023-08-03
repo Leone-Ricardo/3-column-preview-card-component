@@ -1,0 +1,136 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend-Deca", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+article {
+  max-width: 278px;
+  height: 460px;
+  margin-top: 130px;
+  padding: 42px;
+  position: relative;
+}
+
+article.sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 7px 0 0 7px;
+}
+
+article.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+article.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 7px 7px 0;
+}
+
+img {
+  margin-bottom: 36px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+article p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15.8px;
+  line-height: 1.6;
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 14px;
+  width: 146px;
+  border-radius: 30px;
+  font-weight: 700;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 95%);
+  font-family: inherit;
+  bottom: 42px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sedan button {
+  color: hsl(31, 77%, 52%);
+  background-color: hsl(0, 0%, 95%);
+}
+
+.suv button {
+  color: hsl(184, 100%, 22%);
+  background-color: hsl(0, 0%, 95%);
+}
+
+.luxury button {
+  color: hsl(179, 100%, 13%);
+  background-color: hsl(0, 0%, 95%);
+}
+
+button:hover {
+  color: hsl(0, 0%, 95%);
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.attribution {
+  margin-top: 80px;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+}
+.attribution a {
+  color: hsl(0, 100%, 50%);
+}
+
+@media screen and (max-width: 845px) {
+  main {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  article {
+    width: 100%;
+    margin: 0;
+  }
+  article.sedan {
+    border-radius: 7px 7px 0 0;
+  }
+  article.luxury {
+    border-radius: 0 0 7px 7px;
+  }
+}
